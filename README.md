@@ -21,3 +21,50 @@
 # 기술 스택 (Tech Stack)
 * **Frontend**: HTML, CSS3, JAVASCRIPT(ES6+)
 *  **Package Manger / Build Too!** : pnpm /vite
+
+# 🚀 시작하기 (Getting Started)
+
+### 1. 프로젝트 클론 (Clone)
+
+```bash
+git clone https://github.com/drasla/lecture-01-todo-list.git
+cd lecture-01-todo-list
+```
+
+### 2. 의존성 패키지 설치 (Install Dependencies)
+
+```bash
+npm install
+# 또는 pnpm install / yarn install
+```
+
+### 3. 개발 서버 실행 (Run Development Server)
+
+```bash
+npm run dev
+# 또는 pnpm dev / yarn dev
+```
+
+서버 실행 후 터미널에 표시되는 로컬 주소(예: `http://localhost:5173`)로 브라우저에서 접속합니다.
+
+---
+
+## 📁 프로젝트 구조 (Directory Structure)
+
+```text
+lecture-01-todo-list/
+├── index.html          # 메인 HTML
+├── src/                # 소스 코드 폴더
+│   ├── main.js         # JavaScript 메인 스크립트
+│   └── style.css       # 메인 스타일시트
+├── package.json        # 의존성 및 스크립트 관리 파일
+└── README.md           # 프로젝트 안내 문서
+```
+
+---
+
+## 💡 학습 목표 (Learning Objectives)
+
+1. DOM 선택자(Selector) 및 이벤트 리스너(Event Listener) 등록과 활용
+2. 상태(State) 데이터 변경에 따른 화면 업데이트 흐름 이해
+3. 배열 조작 메서드(`map`, `filter`, `forEach` 등) 활용법 익히기
