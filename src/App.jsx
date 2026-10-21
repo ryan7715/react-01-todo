@@ -4,7 +4,7 @@ function App() {
     // userState() 리액트 훅
     // react가 이 컴포넌트가 화면에 떠 있는 동안 유지하며 감시하는 특수 변수를 만들어내는 훅
     // 매개변수로서 useState(초기값)
-    // 그렇게 해서 array를 리턴하는데 그 모양을 [State 변수, state변수를 바꿀 수 이ㅐㅆ는 함수
+    // 그렇게 해서 array를 리턴하는데 그 모양을 [State 변수, state변수를 바꿀 수 있는 함수
     const [count, setCount]= useState(0);
 
 
