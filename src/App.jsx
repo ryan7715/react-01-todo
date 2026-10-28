@@ -1,4 +1,5 @@
 import {useState} from "react";
+import styles from "./App.module.css"
 
 function App() {
 
@@ -46,10 +47,11 @@ function App() {
 
 
     return (
-        <>
-            <h1>My ToDo ({todoList.length})</h1>
-            <form onSubmit={handleSubmit}>
+        <div className={styles.container}>
+            <h1 className={styles.title}>My ToDo ({todoList.length})</h1>
+            <form className={styles.form} onSubmit={handleSubmit}>
                 <input
+                    className={styles.input}
                     type={"text"}
                     placeholder={"Write your to do ..."}
                     onChange={(event) => {
@@ -57,25 +59,30 @@ function App() {
                     }}
                     value={todoValue}
                 />
-                <button type="submit">Add To Do</button>
+                <button type="submit" className={styles.submitButton}>Add To Do</button>
             </form>
-            <hr/>
-            <ul>
-                {todoList.map((item, index) => <li key={index}>
-                    {item.text}
-                    <button onClick={() => {
-                        // 지금 현재의 completed 값을 반대로 저장
-                        return handleToggleTodo(index);
-                    }}>
-                        {item.completed ? "❤️" : "🤍"}</button>
+            <div className={styles.divider}/>
+            <ul className={styles.list}>
+                {todoList.map((item, index) =>
+                    <li key={index} className={styles.listItem}>
+                        <span className={`${styles.text} ${item.completed ? styles.completed : ""}`}>
+                            {item.text}
+                        </span>
+                        <button className={styles.actionButtons}
+                                onClick={() => {
+                                    // 지금 현재의 completed 값을 반대로 저장
+                                    return handleToggleTodo(index);
+                                }}>
+                            {item.completed ? "❤️" : "🤍"}</button>
 
-                    <button onClick={() => {
-                        return handleDeleteTodo(index);
-                    }}>❌
-                    </button>
-                </li>)}
+                        <button className={styles.actionButtons}
+                                onClick={() => {
+                                    return handleDeleteTodo(index);
+                                }}>❌
+                        </button>
+                    </li>)}
             </ul>
-        </>
+        </div>
     );
 }
 
